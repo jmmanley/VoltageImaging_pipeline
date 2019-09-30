@@ -1,6 +1,6 @@
 
 import numpy as np
-import fast_ffts
+from . import fast_ffts
 import multiprocessing as mp
 import time
 import matplotlib.pyplot as plt

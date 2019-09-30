@@ -5,7 +5,7 @@ def naive_std_ROIs(data, THRESH, MIN_AREA):
 
    from skimage.measure import regionprops, label
    
-   if len(data.shape) < 3:
+   if len(data.shape) > 2:
       std_img = np.std(data,0)
    else:
       std_img = data

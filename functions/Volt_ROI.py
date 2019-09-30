@@ -365,12 +365,12 @@ def get_spikes(trace, superfactor=10, threshs=(.4, .6, .75)):
             
 
 def optimize_trace(img,mean_img,cell_inds):
-
+    # JM TODO: deal with all the hard-coded parameters here?
     
     ROI1_image=np.zeros(mean_img.shape)
     ROI1_image[cell_inds]=1
     
-    ROI2_image=binary_fill_holes(binary_dilation(ROI1_image,iterations=5))
+    ROI2_image=binary_fill_holes(binary_dilation(ROI1_image,iterations=2))#5))
     ROI_candidates=np.where(ROI2_image>0)
     
     minx = max(ROI_candidates[1].min()-20,0)
