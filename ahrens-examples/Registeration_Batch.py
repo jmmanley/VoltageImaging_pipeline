@@ -1,6 +1,6 @@
 
 import Volt_Registration as reg
-import Volt_Imfunctions as im
+import Volt_imfunctions as im
 import time
 import glob
 
